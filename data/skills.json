@@ -1,0 +1,65 @@
+{
+  "_README": "Edit 'branches' to customize your skill tree. The center node label is automatically set to your brand name from config/links.ts (SITE.name). To add a whole new branch: copy _EXAMPLE_BRANCH and paste it as a new entry inside 'branches' (give it a unique 'id'). To add a skill to an existing branch: copy _EXAMPLE_SKILL into that branch's 'skills' list. After editing, refresh the dev server (npm run dev) to see changes.",
+  "_EXAMPLE_BRANCH": {
+    "id": "unique-id-no-spaces",
+    "name": "Branch Title",
+    "description": "A short line describing this branch.",
+    "skills": [
+      { "name": "Skill Name", "description": "A short line describing this skill." }
+    ]
+  },
+  "_EXAMPLE_SKILL": { "name": "Skill Name", "description": "A short line describing this skill." },
+  "branches": [
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Building fast, expressive interfaces for the web.",
+      "skills": [
+        { "name": "React", "description": "Component-based UI library for building interactive interfaces." },
+        { "name": "Next.js", "description": "React framework with App Router, SSR, and edge rendering." },
+        { "name": "TypeScript", "description": "Strongly typed JavaScript for scalable codebases." },
+        { "name": "Tailwind CSS", "description": "Utility-first CSS for rapid UI development." }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "Servers, APIs, and the logic behind the curtain.",
+      "skills": [
+        { "name": "Node.js", "description": "JavaScript runtime for building fast, scalable servers." },
+        { "name": "Python", "description": "Scripting, automation, data, and AI pipelines." },
+        { "name": "REST APIs", "description": "Designing and consuming HTTP APIs." },
+        { "name": "GraphQL", "description": "Flexible query language for APIs." }
+      ]
+    },
+    {
+      "id": "databases",
+      "name": "Databases",
+      "description": "Storing and querying data at scale.",
+      "skills": [
+        { "name": "PostgreSQL", "description": "Powerful open-source relational database." },
+        { "name": "MongoDB", "description": "Document-oriented NoSQL for flexible schemas." },
+        { "name": "Redis", "description": "In-memory data store for caching and real-time use cases." }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Tools",
+      "description": "Shipping and operating software reliably.",
+      "skills": [
+        { "name": "Docker", "description": "Containerized, reproducible environments." },
+        { "name": "Git", "description": "Version control and collaborative workflows." },
+        { "name": "CI/CD", "description": "Automated pipelines for testing and deployment." }
+      ]
+    },
+    {
+      "id": "design",
+      "name": "Design",
+      "description": "Crafting interfaces people love to use.",
+      "skills": [
+        { "name": "Figma", "description": "Collaborative UI/UX design and prototyping." },
+        { "name": "UI/UX", "description": "User-centered design principles and patterns." }
+      ]
+    }
+  ]
+}

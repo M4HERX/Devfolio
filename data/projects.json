@@ -1,0 +1,37 @@
+{
+  "_README": "Personal / open-source project entries. To add a project: copy the _EXAMPLE object, paste it inside the 'items' list, and edit its values. Separate entries with a comma. Optional fields you can delete if unused: client, featured, comingSoon, link, cover. IMAGES: drop an image into public/projects/ (e.g. public/projects/my-project.jpg) and set 'cover' to '/projects/my-project.jpg'. It shows at the top of the card. Leave 'cover' out and a generated placeholder is used instead. After editing, refresh the dev server (npm run dev) to see changes.",
+  "_EXAMPLE": {
+    "slug": "unique-id-no-spaces",
+    "title": "Project Title",
+    "client": "Personal",
+    "description": "One or two sentences describing what you built.",
+    "tech": ["Tech One", "Tech Two"],
+    "category": "Category Name",
+    "featured": false,
+    "comingSoon": false,
+    "link": "https://example.com",
+    "cover": "/projects/your-image.jpg"
+  },
+  "items": [
+    {
+      "slug": "example-open-source",
+      "title": "Example Open Source Tool",
+      "client": "Open Source",
+      "description": "A small utility or library you built and open-sourced. Replace this with your real project description.",
+      "tech": ["TypeScript", "Node.js"],
+      "category": "Open Source",
+      "featured": true,
+      "link": "https://github.com/yourusername"
+    },
+    {
+      "slug": "example-personal-project",
+      "title": "Example Personal Project",
+      "client": "Personal",
+      "description": "A side project you built to explore a new technology or solve a personal problem. Replace with your real project.",
+      "tech": ["React", "API"],
+      "category": "Personal",
+      "featured": false,
+      "comingSoon": true
+    }
+  ]
+}

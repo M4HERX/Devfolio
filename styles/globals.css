@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Portfolio Template — Theme tokens
+   To re-theme the whole site, edit these CSS variables.
+   ============================================================ */
+:root {
+  --bg-primary: #1e1f22; /* Discord dark, main background */
+  --bg-secondary: #2b2d31; /* Cards, sidebars */
+  --bg-tertiary: #313338; /* Elevated surfaces, nav */
+  --accent-blue: #5865f2; /* Discord blurple / electric blue */
+  --accent-glow: #4f9eff; /* Lighter blue for glows and highlights */
+  --text-primary: #f2f3f5;
+  --text-muted: #949ba4;
+  --border: #3f4147;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ---------- Custom thin, blue-accented scrollbar ---------- */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--accent-blue), var(--accent-glow));
+  border-radius: 999px;
+  border: 2px solid var(--bg-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-glow);
+}
+html {
+  scrollbar-color: var(--accent-blue) var(--bg-primary);
+  scrollbar-width: thin;
+}
+
+::selection {
+  background: rgba(88, 101, 242, 0.4);
+  color: var(--text-primary);
+}
+
+/* ---------- Reusable utility classes ---------- */
+@layer components {
+  .glow-text {
+    text-shadow: 0 0 18px rgba(79, 158, 255, 0.55), 0 0 4px rgba(79, 158, 255, 0.4);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 0 1px var(--border), 0 0 20px rgba(79, 158, 255, 0.08);
+  }
+
+  .glow-border-hover {
+    box-shadow: 0 0 0 1px var(--accent-glow), 0 0 24px rgba(79, 158, 255, 0.35);
+  }
+
+  .section-pad {
+    @apply px-6 py-20 sm:px-10 md:px-16 lg:px-24;
+  }
+
+  .grain-overlay::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.025;
+    background-image: radial-gradient(var(--text-muted) 1px, transparent 1px);
+    background-size: 3px 3px;
+  }
+}
+
+/* ---------- Flowing light effect for branch lines (SVG) ---------- */
+.flow-line {
+  stroke-dasharray: 6 10;
+  animation: flow-dash 18s linear infinite;
+}
+
+/* ---------- Solid text with a strong white glow sweeping left to right ----------
+   The text stays fully visible at all times (base color below). A duplicate of
+   the text is layered on top via ::after and painted only where a bright white
+   band passes, so a glowing light appears to travel across without ever hiding
+   the text. */
+.text-shine {
+  position: relative;
+  color: var(--text-muted);
+}
+.text-shine::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    100deg,
+    transparent 28%,
+    rgba(255, 255, 255, 0.5) 44%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0.5) 56%,
+    transparent 72%
+  );
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.6));
+  animation: text-shine 5s linear infinite;
+}
+
+@keyframes text-shine {
+  0% {
+    background-position: 150% 0;
+  }
+  100% {
+    background-position: -50% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

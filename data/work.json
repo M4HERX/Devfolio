@@ -1,0 +1,27 @@
+{
+  "_README": "Client work entries. To add a project: copy the _EXAMPLE object, paste it inside the 'items' list, and edit its values. Separate entries with a comma. Optional fields you can delete if unused: client, featured, comingSoon, link, cover. IMAGES: drop an image into public/work/ (e.g. public/work/my-project.jpg) and set 'cover' to '/work/my-project.jpg'. After editing, refresh the dev server (npm run dev) to see changes.",
+  "_EXAMPLE": {
+    "slug": "unique-id-no-spaces",
+    "title": "Project Title",
+    "client": "Client Name",
+    "description": "One or two sentences describing what you built and the value it delivered.",
+    "tech": ["Tech One", "Tech Two", "Tech Three"],
+    "category": "Category Name",
+    "featured": false,
+    "comingSoon": false,
+    "link": "https://example.com",
+    "cover": "/work/your-image.jpg"
+  },
+  "items": [
+    {
+      "slug": "example-client-project",
+      "title": "Example Client Project",
+      "client": "Acme Corp",
+      "description": "A full-stack web platform built for a client, featuring user authentication, a dashboard, and real-time data. Replace this with your real project description.",
+      "tech": ["Next.js", "Node.js", "PostgreSQL"],
+      "category": "Full Stack",
+      "featured": true,
+      "link": "https://example.com"
+    }
+  ]
+}
