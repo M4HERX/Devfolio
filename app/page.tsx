@@ -38,7 +38,7 @@ export default function HomePage() {
         }}
       />
 
-      <div className="relative z-10 flex max-w-4xl flex-col items-center">
+      <div className="relative z-10 flex max-w-4xl flex-col items-center pb-28">
         <motion.span
           custom={0}
           variants={fadeUp}
@@ -120,7 +120,7 @@ export default function HomePage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2"
+        className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2"
       >
         <span className="font-mono text-[10px] uppercase tracking-widest text-text-muted">
           {t("home.scroll")}
