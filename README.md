@@ -6,6 +6,11 @@ A dark, space-themed personal portfolio built with **Next.js 14**, **TypeScript*
 
 ---
 
+## Live Demo
+https://devfolio.m4herx.com
+
+---
+
 ## Design & Aesthetic
 
 The template has a **futuristic, deep-space atmosphere** — think mission control meets a developer's universe.
@@ -20,12 +25,6 @@ The template has a **futuristic, deep-space atmosphere** — think mission contr
 - **Scrollbar** — even the browser scrollbar is styled: a thin gradient line running electric blue to cyan, matching the accent palette.
 
 The overall impression is **cosmic and technical** — a portfolio that feels like it belongs inside a space station's interface, built by someone who takes both craft and the cosmos seriously.
-
----
-
-## Live Preview
-
-Deploy on Vercel in seconds — see [Deploy](#deploy) below.
 
 ---
 
